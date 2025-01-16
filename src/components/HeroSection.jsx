@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import Arslan from "../images/Arslan.jpeg"
+import Arslan from "../images/Arslan.jpeg";
+import DownloadCV from "./DownloadCV";
 
 const HeroSection = () => {
   const [counters, setCounters] = useState({
@@ -67,9 +68,13 @@ const HeroSection = () => {
             <button className="bg-orange-500 text-white px-6 py-2 rounded-md hover:bg-orange-600 transition">
               Hire Me
             </button>
-            <button className="bg-transparent text-white border border-gray-600 px-6 py-2 rounded-md hover:bg-gray-700 transition">
+            <a
+              href="/resume.pdf" // Replace with the actual path to your CV file
+              download="My_CV.pdf" // Optional: Sets the default download file name
+              className="bg-transparent text-white border border-gray-600 px-6 py-2 rounded-md hover:bg-gray-700 transition"
+            >
               Download CV
-            </button>
+            </a>
           </div>
 
           {/* Counters */}
@@ -95,11 +100,7 @@ const HeroSection = () => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1 }}
         >
-          <img
-            src={Arslan}
-            alt="Profile"
-            className="rounded-lg shadow-lg"
-          />
+          <img src={Arslan} alt="Profile" className="rounded-lg shadow-lg" />
         </motion.div>
       </div>
     </div>

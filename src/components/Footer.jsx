@@ -15,7 +15,7 @@ function Footer() {
         {/* Logo and Navigation */}
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           {/* Logo */}
-          <div className="text-foundationOrange text-3xl font-bold">LOGO</div>
+          <div className="text-foundationOrange text-3xl font-bold">imArslan.dev</div>
 
           {/* Navigation Links */}
           <ul className="flex gap-6 text-sm md:text-base">
@@ -73,11 +73,11 @@ function Footer() {
         <div className="flex flex-col items-center mt-8 text-center gap-3">
           <div className="flex items-center gap-2">
             <FaEnvelope className="text-foundationOrange" />
-            <span>Mahmood.fazile7005@gmail.com</span>
+            <span>imArslan7061@gmail.com</span>
           </div>
           <div className="flex items-center gap-2">
             <FaPhone className="text-foundationOrange" />
-            <span>+93 729 107 005</span>
+            <span>+92 348 2375 564</span>
           </div>
         </div>
 
@@ -92,7 +92,7 @@ function Footer() {
               href="#"
               className="text-foundationOrange hover:underline"
             >
-              @mahmood.fazile
+              MuhammadArslan
             </a>{" "}
             | Web Developer
           </span>

@@ -6,6 +6,7 @@ import AboutSection from "./components/AboutSection";
 import ContactForm from "./components/ContactForm";
 import HeroSection from "./components/HeroSection";
 import Footer from "./components/Footer";
+import DownloadCV from "./components/DownloadCV";
 
 function App() {
   return (
