@@ -1,6 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { skills } from "../utils/data";
+import Arslan from "../images/Arslan.jpeg"
+
 
 const AboutSection = () => {
   return (
@@ -17,7 +19,7 @@ const AboutSection = () => {
         transition={{ type: "spring", stiffness: 200 }}
       >
         <img
-          src="path-to-your-image.jpg"
+          src={Arslan}
           alt="About Me"
           className="object-cover w-full h-full"
         />

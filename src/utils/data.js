@@ -3,6 +3,12 @@ import Sample1 from "../images/sample1.jpg";
 import Sample2 from "../images/sample2.jpg";
 import Sample3 from "../images/sample3.jpg";
 import Sample4 from "../images/sample4.jpg";
+import HTML from "../images/skills/html.png";
+import CSS from "../images/skills/css.png";
+import JS from "../images/skills/javascript.png";
+import React from "../images/skills/react.png";
+import Next from "../images/skills/Nextjs.png";
+import Tailwind from "../images/skills/tailwind.png";
 
 // Services Section Data
 const servicesData = [
@@ -91,19 +97,12 @@ const portfolioItems = [
 ];
 
 const skills = [
-  { name: "Figma", percentage: 100, icon: "/icons/figma-icon.png" },
-  { name: "Adobe XD", percentage: 100, icon: "/icons/adobe-xd-icon.png" },
-  {
-    name: "Adobe Photoshop",
-    percentage: 85,
-    icon: "/icons/photoshop-icon.png",
-  },
-  {
-    name: "Adobe Illustrator",
-    percentage: 60,
-    icon: "/icons/illustrator-icon.png",
-  },
-  { name: "Adobe Premiere", percentage: 70, icon: "/icons/premiere-icon.png" },
+  { name: "HTML", percentage: 90, icon: HTML },
+  { name: "CSS", percentage: 80, icon: CSS },
+  { name: "JavaScript", percentage: 75, icon: JS },
+  { name: "React.js", percentage: 85, icon: React },
+  { name: "Next.js", percentage: 70, icon: Next },
+  { name: "Tailwind Css", percentage: 99, icon: Tailwind },
 ];
 
 export { servicesData, portfolioItems, skills };
