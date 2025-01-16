@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import emailjs from "emailjs-com";
+import emailjs from '@emailjs/browser';
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -49,10 +49,10 @@ const ContactForm = () => {
     if (validateForm()) {
       emailjs
         .send(
-          "your_service_id", // Replace with your EmailJS Service ID
-          "your_template_id", // Replace with your EmailJS Template ID
+          "service_asvbwpr", // Replace with your EmailJS Service ID
+          "template_53yhwb8", // Replace with your EmailJS Template ID
           formData,
-          "your_public_key" // Replace with your EmailJS Public Key
+          "xoCpkf7P-viXCCmdL" // Replace with your EmailJS Public Key
         )
         .then(() => {
           setSuccess("Message sent successfully!");
