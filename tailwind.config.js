@@ -8,13 +8,9 @@ export default {
     colors: {
       'foundationOrange': '#FD6F00',
       'BackgroundMain': '#121212',
-      'pink': '#ff49db',
-      'orange': '#ff7849',
-      'green': '#13ce66',
-      'yellow': '#ffc82c',
-      'gray-dark': '#273444',
-      'gray': '#8492a6',
-      'gray-light': '#d3dce6',
+      'whiteColor': '#FEFEFE',
+      'greyColor': '#707070',
+      'sectionBg': '#1b1b1b',
     },
     fontFamily: {
       lato: ["Lato", "serif"],
