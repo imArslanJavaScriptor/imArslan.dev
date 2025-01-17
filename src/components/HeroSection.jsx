@@ -39,7 +39,7 @@ const HeroSection = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.5 }}
           >
-            Muhammad Arslan
+            Muhammad Arslan From Future
           </motion.h1>
           <motion.h2
             className="text-3xl md:text-4xl font-semibold mt-2 text-foundationOrange"
