@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import Arslan from "../images/Arslan.jpeg";
+import Arslan from "../images/Arslan.png";
 import DownloadCV from "./DownloadCV";
 
 const HeroSection = () => {
