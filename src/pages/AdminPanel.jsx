@@ -17,10 +17,10 @@ import {
   X,
   Send,
 } from "lucide-react";
-import { useTheme } from "../hooks/useTheme";
-import { useAdmin } from "../hooks/useAdmin";
-// import { useProjects } from "../hooks/useProjects";
-import { useLocalStorage } from "../hooks/useLocalStorage";
+import { useTheme } from "../context/ThemeContext";
+import { useAdmin } from "../context/AdminContext";
+import { useProjects } from "../context/ProjectsContext"; 
+import {useLocalStorage} from "../hooks/useLocalStorage"
 import { toast } from "react-toastify";
 
 const AdminPanel = () => {

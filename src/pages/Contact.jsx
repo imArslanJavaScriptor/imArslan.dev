@@ -2,12 +2,12 @@ import React, { useState } from "react";
 import Button from "../components/ui/Button";
 import Card from "../components/ui/Card"
 import Input, { Textarea } from "../components/ui/Input";
-import useTheme from "../hooks/useTheme";
-import useScrollspy from "../hooks/useScrollspy";
+import { useTheme } from "../context/ThemeContext";
+// import useScrollspy from "../hooks/useScrollspy";
 
 const Contact = () => {
-  const { isDark } = useTheme(); // Use theme hook for dark mode
-  const activeSection = useScrollspy(["contact"]); // Track if contact section is in view
+  const { isDark } = useTheme(); 
+  // const activeSection = useScrollspy(["contact"]); // Track if contact section is in view
 
   const [formData, setFormData] = useState({
     name: "",

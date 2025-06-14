@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import Button from "../components/ui/Button"
-import Card from "../ui/Card";
+import Card from "../components/ui/Card";
+import { useTheme } from "../context/ThemeContext";
 
 const About = () => {
   const [activeTab, setActiveTab] = useState("story");
+  const { isDark, toggleTheme } = useTheme();
 
   const skills = {
     frontend: [

@@ -1,90 +1,83 @@
-import React, { Suspense } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-// import { ThemeProvider } from "./context/ThemeContext";
-import ThemeProvider from "./context/ThemeProvider";
-// import { AdminProvider, useAdmin } from "./context/AdminContext";
-import ProjectProvider from "./context/ProjectProvider";
-import { ToastContainer } from "react-toastify";
-import { useTheme } from "./hooks/useTheme";
-
-// Pages
-import Home from "./pages/Home";
-import Portfolio from "./pages/Portfolio";
-import About from "./pages/About";
-import Contact from "./pages/Contact";
-import AdminPanel from "./pages/Admin";
-// import NotFound from "./pages/NotFound"; // Added for 404
-
-// Components
+import React from "react";
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+  Navigate,
+  Outlet,
+} from "react-router-dom";
+import { ThemeProvider } from "./context/ThemeContext";
+import { AdminProvider, useAdmin } from "./context/AdminContext"
+import { ProjectsProvider } from "./context/ProjectsContext"; 
+import AdminPanel from "./pages/AdminPanel";
 import Header from "./components/common/Header";
 import Footer from "./components/common/Footer";
-import ScrollToTop from "./components/common/ScrollToTop";
-import LoadingSpinner from "./components/common/LoadingSpinner"; // Added for Suspense
-
-// Styles
-import "./styles/globals.css";
+import Home from "./pages/Home";
+import Test from "./pages/Test";
+import About from "./pages/About";
+import Portfolio from "./pages/Portfolio";
+import Contact from "./pages/Contact";
+import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-// Protected Route Component
-const ProtectedRoute = ({ children }) => {
+// ProtectedRoute component to restrict access to authenticated users
+function ProtectedRoute({ children }) {
   const { isAuthenticated } = useAdmin();
-  if (!isAuthenticated) {
-    // In production, redirect to login page or show auth modal
-    return <AdminPanel />; // Renders login form from AdminPanel
-  }
-  return children;
-};
+  return isAuthenticated ? children : <Navigate to="/" />;
+}
+
+// Layout component for non-admin pages with Header
+function MainLayout() {
+  return (
+    <div>
+      <Header />
+      <main className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <Outlet />
+      </main>
+      <Footer/>
+    </div>
+  );
+}
 
 function App() {
-  const { isDark } = useTheme(); // For ToastContainer theme
-
   return (
     <ThemeProvider>
       <AdminProvider>
-        <ProjectProvider>
-          <Router basename={process.env.PUBLIC_URL || "/"}>
-            {" "}
-            {/* Support subpath deployment */}
-            <ScrollToTop />
-            <Header />
-            <main
-              id="main-content"
-              aria-label="Main content"
-              className="flex-1"
-            >
-              <Suspense fallback={<LoadingSpinner />}>
-                <Routes>
-                  <Route path="/" element={<Home />} />
-                  <Route path="/portfolio" element={<Portfolio />} />
-                  <Route path="/about" element={<About />} />
-                  <Route path="/contact" element={<Contact />} />
-                  <Route
-                    path="/admin"
-                    element={
-                      <ProtectedRoute>
-                        <AdminPanel />
-                      </ProtectedRoute>
-                    }
-                  />
-                  <Route path="*" element={<NotFound />} />
-                </Routes>
-              </Suspense>
-            </main>
-            <Footer />
+        <ProjectsProvider>
+          <BrowserRouter>
+            <Routes>
+              <Route element={<MainLayout />}>
+                <Route path="/" element={<Home />} />
+                <Route path="/test" element={<Test />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/Portfolio" element={<Portfolio />} />
+                <Route path="/contact" element={<Contact />} />
+                <Route path="/adminPanel" element={<AdminPanel />} />
+              </Route>
+              <Route
+                path="/admin"
+                element={
+                  <ProtectedRoute>
+                    <AdminPanel />
+                  </ProtectedRoute>
+                }
+              />
+              <Route path="*" element={<Navigate to="/" />} />
+            </Routes>
             <ToastContainer
-              position="bottom-right"
-              autoClose={5000}
+              position="top-right"
+              autoClose={3000}
               hideProgressBar={false}
-              newestOnTop
+              newestOnTop={false}
               closeOnClick
               rtl={false}
               pauseOnFocusLoss
               draggable
               pauseOnHover
-              theme={isDark ? "dark" : "light"} // Sync with ThemeContext
+              theme="light"
             />
-          </Router>
-        </ProjectProvider>
+          </BrowserRouter>
+        </ProjectsProvider>
       </AdminProvider>
     </ThemeProvider>
   );

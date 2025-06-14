@@ -1,9 +1,11 @@
 import React, { useState } from "react";
-import Button from "../ui/Button";
-import Card from "../ui/Card";
-import Modal from "../ui/Modal";
+import Button from "../components/ui/Button";
+import Card from "../components/ui/Card";
+import Modal from "../components/ui/Modal";
+import { useTheme } from "../context/ThemeContext";
 
 const Portfolio = () => {
+  const { isDark, toggleTheme } = useTheme();
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [selectedProject, setSelectedProject] = useState(null);
   const [showProjectModal, setShowProjectModal] = useState(false);
