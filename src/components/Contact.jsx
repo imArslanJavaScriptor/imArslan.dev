@@ -65,7 +65,7 @@ function Contact() {
               <div className="flex items-center">
                 <Mail className="w-5 h-5 mr-4 text-gray-500" />
                 <span className="text-gray-600 dark:text-gray-400">
-                  arslan@example.com
+                  imArslan7061@gmail.com
                 </span>
               </div>
               <div className="flex items-center">

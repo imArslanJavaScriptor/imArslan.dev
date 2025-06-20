@@ -11,7 +11,7 @@ function About() {
           <div className="grid md:grid-cols-3 gap-8 items-start">
             {/* <div className="md:col-span-2 space-y-4 text-gray-600 dark:text-gray-400 animate-fade-in-left paraText">
               <p>
-                I'm Adebajo Stephen, a passionate 18-year-old self-taught
+                I'm Arslan, a passionate 18-year-old self-taught
                 Nigerian software engineer with over 18 months of experience and
                 a strong drive for building impactful web experiences.
               </p>

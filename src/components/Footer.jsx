@@ -18,7 +18,7 @@ function Footer() {
       <footer className="px-6 py-8 border-t border-gray-200 dark:border-gray-700">
         <div className="max-w-6xl mx-auto text-center">
           <p className="text-gray-600 dark:text-gray-400 text-sm">
-            Copyright 2024 | Adebajo Stephen
+            Copyright 2025 | imArslan.dev
           </p>
           <div className="flex justify-center space-x-4 mt-4">
             <a
