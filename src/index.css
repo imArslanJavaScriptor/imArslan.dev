@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Custom Css Styles */
+/* global.css or App.css */
+
+.primaryHeading {
+  @apply text-4xl font-bold text-gray-900 dark:text-white tracking-tight;
+}
+
+.secondaryHeading {
+  @apply text-2xl font-semibold text-gray-700 dark:text-gray-200;
+}
+
+.paraText {
+  @apply text-base text-gray-600 dark:text-gray-300 leading-relaxed;
+}
+
+
+button {
+  @apply cursor-pointer
+}
+
+button:active {
+  transform: scale(0.96);
+  transition: button 0.3s ease-in-out;
+}
+
+
+
+.icon-scroll-wrapper {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+.icon-scroll-track {
+  display: inline-flex;
+  gap: 3rem;
+  animation: moveIcons 30s linear infinite;
+  will-change: transform;
+}
+
+.icon-scroll-wrapper:hover .icon-scroll-track {
+  animation-play-state: paused;
+}
+
+
+input,
+textarea {
+  @apply  placeholder:text-black dark:placeholder:text-gray-200
+}
+/* === Skill Section Moving Animation  === */
+
+@keyframes moveIcons {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+
+
