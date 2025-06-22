@@ -69,10 +69,10 @@ function Experiences() {
           </Swiper>
 
           {/* 5. Your custom navigation buttons now just need the correct classNames */}
-          <div className="swiper-button-prev-custom absolute top-1/2 left-[-10%] transform -translate-y-1/2 z-10 cursor-pointer h-[50px] w-[50px] rounded-[50%] bg-[#222] text-white dark:bg-white dark:text-black flex items-center justify-center group">
+          <div className="swiper-button-prev-custom absolute bottom-[-30%] left-[40%] xl:top-1/2 xl:left-[-10%] xl:transform -translate-y-1/2 z-10 cursor-pointer h-[50px] w-[50px] rounded-[50%] bg-[#222] text-white dark:bg-white dark:text-black flex items-center justify-center group">
             <ArrowLeft className="w-8 h-8 group-hover:translate-x-[-5px] duration-300" />
           </div>
-          <div className="swiper-button-next-custom absolute top-1/2 right-[-10%] transform -translate-y-1/2 z-10 cursor-pointer h-[50px] w-[50px] rounded-[50%]  bg-[#222] text-white dark:bg-white dark:text-black flex items-center justify-center group">
+          <div className="swiper-button-next-custom absolute bottom-[-30%] right-[40%] xl:top-1/2 xl:right-[-10%] xl:transform -translate-y-1/2 z-10 cursor-pointer h-[50px] w-[50px] rounded-[50%]  bg-[#222] text-white dark:bg-white dark:text-black flex items-center justify-center group">
             <ArrowRight className="w-8 h-8 group-hover:translate-x-[5px] duration-300" />
           </div>
         </div>
