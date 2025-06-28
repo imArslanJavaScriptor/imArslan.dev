@@ -13,7 +13,7 @@ function Projects() {
       : allProjects.filter((project) => project.category === activeCategory);
 
   return (
-    <section id="portfolio" className="px-6 py-16">
+    <section id="projects" className="px-6 py-16">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-3xl font-bold text-center mb-6 text-white">
           Featured Projects
@@ -27,9 +27,9 @@ function Projects() {
               onClick={() => setActiveCategory(category)}
               className={`${
                 activeCategory === category
-                  ? "text-yellow-400"
-                  : "text-gray-400"
-              } hover:text-yellow-400 transition`}
+                  ? "text-black bg-yellow-400" 
+                  : "text-yellow-400 dark:text-black"
+              } dark:hover:text-yellow-400 font-medium transition px-5 py-2  bg-[#212121] dark:bg-[#fefefe] rounded-[100px] text-lg`}
             >
               {category}
             </button>

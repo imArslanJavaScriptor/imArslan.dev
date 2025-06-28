@@ -3,38 +3,12 @@ import SideImg from "/src/assets/imArslan.jpeg";
 
 function About() {
   return (
-    <div>
-      <section className="px-6 py-16">
+    <section id="about" className="px-6 py-16">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-4xl font-bold mb-5 primaryHeading">About</h2>
 
           <div className="grid md:grid-cols-3 gap-8 items-start">
-            {/* <div className="md:col-span-2 space-y-4 text-gray-600 dark:text-gray-400 animate-fade-in-left paraText">
-              <p>
-                I'm Arslan, a passionate 18-year-old self-taught
-                Nigerian software engineer with over 18 months of experience and
-                a strong drive for building impactful web experiences.
-              </p>
-              <p>
-                As an 18-year-old front-end developer, I focus on creating
-                seamless digital experiences, from sleek apps to intuitive
-                interfaces that building user interfaces through web, learning
-                React and Next.js to build applications.
-              </p>
-              <p>
-                I'm currently working on advanced full-stack projects, diving
-                deeper into the art and science of innovation in just one of the
-                world's most companies like <strong>Google</strong> - Are
-                18-year of technology.
-              </p>
-              <p>
-                I'm also actively building my presence in the tech community.
-                With my <strong>MD, fullstack.ng</strong>- I'm focused and
-                committed with technologies in the indie hacker and maker space.
-                Community creators have shared more than I have always enjoyed
-                building projects and solutions.
-              </p>
-            </div> */}
+
 
             <div className="md:col-span-2 space-y-4 text-gray-600 dark:text-gray-400 animate-fade-in-left paraText">
               <p>
@@ -78,7 +52,6 @@ function About() {
           </div>
         </div>
       </section>
-    </div>
   );
 }
 

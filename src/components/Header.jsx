@@ -43,6 +43,9 @@ function Header() {
             <a href="#home" className="hover:text-gray-300">
               Home
             </a>
+            <a href="#about" className="hover:text-gray-300">
+              About
+            </a>
             <a href="#projects" className="hover:text-gray-300">
               Projects
             </a>
@@ -54,7 +57,7 @@ function Header() {
           {/* Icons + Contact + Dark Toggle */}
           <div className="flex gap-4 items-center">
             <a
-              href="https://github.com/"
+              href="https://github.com/imArslanJavaScriptor"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-gray-300"
