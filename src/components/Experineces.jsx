@@ -43,22 +43,24 @@ function Experiences() {
             {experiences.map((exp, index) => (
               // 4. Use the SwiperSlide component for each item
               <SwiperSlide key={index}>
-                <div className="bg-[#222] dark:bg-[#fefefe] p-6 rounded-lg shadow-lg h-full">
+                <div className="dark:bg-[#222]/50 bg-gray-200  text-black dark:text-[#efefef] backdrop-blur-2xl p-6 rounded-[20px] shadow-lg 
+                max-[400px]:h-[400px]
+                border-t-[5px] border-transparent transition-colors duration-300 dark:hover:border-gray-200 hover:border-gray-800">
                   {" "}
                   {/* Added h-full for consistent height */}
                   <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-2">
-                    <h3 className="font-bold text-lg dark:text-black text-white">
+                    <h3 className="font-bold text-lg">
                       {exp.title}
                     </h3>
-                    <div className="flex items-center text-sm dark:text-[#333] text-[#fefefe]">
+                    <div className="flex items-center text-sm">
                       <span>{exp.company}</span>
                     </div>
                   </div>
-                  <div className="flex items-center text-sm mb-4  dark:text-[#333] text-[#fefefe]">
+                  <div className="flex items-center text-sm mb-4">
                     <Calendar className="w-4 h-4 mr-2" />
                     <span>{exp.period}</span>
                   </div>
-                  <div className="space-y-2  dark:text-[#333] text-[#fefefe]">
+                  <div className="space-y-2">
                     {exp.responsibilities.map((resp, idx) => (
                       <p key={idx}>• {resp}</p>
                     ))}
@@ -68,13 +70,7 @@ function Experiences() {
             ))}
           </Swiper>
 
-          {/* 5. Your custom navigation buttons now just need the correct classNames */}
-          <div className="swiper-button-prev-custom absolute bottom-[-30%] left-[40%] xl:top-1/2 xl:left-[-10%] xl:transform -translate-y-1/2 z-10 cursor-pointer h-[50px] w-[50px] rounded-[50%] bg-[#222] text-white dark:bg-white dark:text-black flex items-center justify-center group">
-            <ArrowLeft className="w-8 h-8 group-hover:translate-x-[-5px] duration-300" />
-          </div>
-          <div className="swiper-button-next-custom absolute bottom-[-30%] right-[40%] xl:top-1/2 xl:right-[-10%] xl:transform -translate-y-1/2 z-10 cursor-pointer h-[50px] w-[50px] rounded-[50%]  bg-[#222] text-white dark:bg-white dark:text-black flex items-center justify-center group">
-            <ArrowRight className="w-8 h-8 group-hover:translate-x-[5px] duration-300" />
-          </div>
+       
         </div>
       </div>
     </section>

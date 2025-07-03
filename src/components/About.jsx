@@ -41,7 +41,7 @@ function About() {
             </div>
 
             <div className="flex justify-center animate-fade-in-right">
-              <div className="w-[350px] h-[400px] bg-gray-200 dark:bg-gray-700 rounded-lg overflow-hidden">
+              <div className="max-w-[350px] w-full h-[400px] bg-gray-200 dark:bg-gray-700 rounded-lg overflow-hidden">
                 <img
                   src={SideImg}
                   alt="Profile"

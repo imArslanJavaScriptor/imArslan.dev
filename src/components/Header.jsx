@@ -12,9 +12,11 @@ function Header() {
 
   return (
     <header className="w-full flex justify-center sticky top-[10px] z-[100]">
-      <nav className="bg-zinc-900 text-white rounded-full px-6 py-3 shadow-lg flex items-center justify-between max-w-4xl w-full relative">
+      <nav className="bg-zinc-900 text-white rounded-full px-6 py-3 shadow-lg flex items-center justify-between max-w-4xl w-full relative mx-5">
         {/* Logo */}
-        <div className="text-lg font-bold tracking-wide">imArslan.dev</div>
+        <a href="#home">
+          <div className="text-lg font-bold tracking-wide">imArslan.dev</div>
+        </a>
 
         {/* Dark Mode Toggle - always visible */}
         <div className="flex items-center gap-4 lg:hidden">
@@ -91,42 +93,82 @@ function Header() {
           </div>
         </div>
 
-        {/* Mobile Dropdown Menu */}
+        {/* Mobile Sidebar Menu */}
         {menuOpen && (
-          <div className="absolute top-[60px] left-0 w-full bg-zinc-900 text-white rounded-xl shadow-xl p-6 flex flex-col gap-4 z-50 transition-all duration-300 lg:hidden">
-            <a href="#home" onClick={toggleMenu} className="hover:text-gray-300">
-              Home
-            </a>
-            <a href="#projects" onClick={toggleMenu} className="hover:text-gray-300">
-              Projects
-            </a>
-            <a href="#experience" onClick={toggleMenu} className="hover:text-gray-300">
-              Experience
-            </a>
-            <a
-              href="https://github.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-gray-300"
-            >
-              GitHub
-            </a>
-            <a
-              href="/resume.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-gray-300"
-            >
-              Resume
-            </a>
-            <a
-              href="#contact"
+          <>
+            {/* Backdrop */}
+            <div
+              className="fixed inset-0 bg-black/15 bg-opacity-40 z-40"
               onClick={toggleMenu}
-              className="bg-white text-black px-4 py-1.5 rounded-full text-sm font-medium shadow-sm hover:bg-gray-200 transition w-fit"
+            ></div>
+
+            {/* Sidebar */}
+            <div
+              className={`fixed top-0 right-0 h-[300px] w-full bg-zinc-900 text-white z-50 p-6 transform  ease-in-out ${
+                menuOpen ? "translate-y-0" : "-translate-y-full duration-500"
+              }`}
             >
-              Contact
-            </a>
-          </div>
+              <div className="flex justify-between items-center mb-8">
+                <div className="text-lg font-bold">imArslan.dev</div>
+                <button onClick={toggleMenu}>
+                  <FiX size={24} />
+                </button>
+              </div>
+              <nav className="flex flex-col gap-5">
+                <a
+                  href="#home"
+                  onClick={toggleMenu}
+                  className="hover:text-gray-300"
+                >
+                  Home
+                </a>
+                <a
+                  href="#about"
+                  onClick={toggleMenu}
+                  className="hover:text-gray-300"
+                >
+                  About
+                </a>
+                <a
+                  href="#projects"
+                  onClick={toggleMenu}
+                  className="hover:text-gray-300"
+                >
+                  Projects
+                </a>
+                <a
+                  href="#experience"
+                  onClick={toggleMenu}
+                  className="hover:text-gray-300"
+                >
+                  Experience
+                </a>
+                <a
+                  href="https://github.com/imArslanJavaScriptor"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-gray-300"
+                >
+                  GitHub
+                </a>
+                <a
+                  href="/resume.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-gray-300"
+                >
+                  Resume
+                </a>
+                <a
+                  href="#contact"
+                  onClick={toggleMenu}
+                  className="bg-white text-black px-4 py-1.5 rounded-full text-sm font-medium shadow-sm hover:bg-gray-200 transition w-fit"
+                >
+                  Contact
+                </a>
+              </nav>
+            </div>
+          </>
         )}
       </nav>
     </header>

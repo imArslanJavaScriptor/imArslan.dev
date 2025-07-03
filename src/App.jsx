@@ -16,8 +16,8 @@ function App() {
   const { isDark, toggle } = useDarkMode();
 
   return (
-    <div className="min-h-screen bg-white dark:bg-[#121212] text-black dark:text-white transition-colors duration-300 cursor-none">
-      <CustomCursor/>
+    <div className="min-h-screen bg-white dark:bg-[#121212] text-black dark:text-white transition-colors duration-300">
+      {/* <CustomCursor/> */}
       <Header isDark={isDark} />
       <Hero />
       <About />
