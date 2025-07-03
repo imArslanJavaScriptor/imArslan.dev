@@ -10,12 +10,14 @@ import {
 } from "./components";
 import useDarkMode from "./hooks/useDarkMode";
 import { ArrowUp } from "lucide-react";
+import CustomCursor from "./components/CustomCursor";
 
 function App() {
   const { isDark, toggle } = useDarkMode();
 
   return (
-    <div className="min-h-screen bg-white dark:bg-[#121212] text-black dark:text-white transition-colors duration-300">
+    <div className="min-h-screen bg-white dark:bg-[#121212] text-black dark:text-white transition-colors duration-300 cursor-none">
+      <CustomCursor/>
       <Header isDark={isDark} />
       <Hero />
       <About />

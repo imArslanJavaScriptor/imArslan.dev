@@ -9,6 +9,10 @@ html {
   scroll-behavior: smooth;
 }
 
+cursor {
+  display: none;
+}
+
 .darkModeBTN {
   @apply bg-[#212121] dark:bg-[#fefefe] text-yellow-500 dark:text-black
 }
