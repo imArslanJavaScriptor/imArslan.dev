@@ -19,17 +19,18 @@ function Hero() {
       </div>
 
       {/* Heading */}
-      <h1 className="text-4xl md:text-5xl font-bold mb-2 primaryHeading">
+      <h1 className="text-4xl md:text-5xl font-bold mb-2 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
         Hi, I'm <span>Arslan</span>.
       </h1>
-      <h2 className="text-4xl md:text-5xl font-bold mb-4 secondaryHeading">
-        Software Engineer
+      <h2 className="text-4xl md:text-5xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-600">
+        Frontend Developer
       </h2>
 
       {/* Description */}
       <p className="paraText max-w-xl mx-auto mb-6">
-        Self-taught developer, passionate about building with React.js and
-        Next.js, with a hunger to learn and grow in the tech world.
+        Self-taught developer passionate about crafting user interfaces and
+        interactive web applications that make a positive impact — always eager
+        to learn and grow in the tech world.
       </p>
 
       {/* CTA Buttons */}

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { FaGithub } from "react-icons/fa";
 import { LuFileText } from "react-icons/lu";
 import { FiMenu, FiX } from "react-icons/fi";
@@ -9,6 +9,19 @@ function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => setMenuOpen((prev) => !prev);
+
+  useEffect(() => {
+    if (menuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+
+    // Cleanup when component unmounts
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [menuOpen]);
 
   return (
     <header className="w-full flex justify-center sticky top-[10px] z-[100]">
@@ -94,82 +107,60 @@ function Header() {
         </div>
 
         {/* Mobile Sidebar Menu */}
-        {menuOpen && (
-          <>
-            {/* Backdrop */}
-            <div
-              className="fixed inset-0 bg-black/15 bg-opacity-40 z-40"
-              onClick={toggleMenu}
-            ></div>
+        <div
+          className={`fixed inset-0 z-40 transition-opacity duration-300 ${
+            menuOpen ? "block bg-black/40" : "hidden"
+          }`}
+          onClick={toggleMenu}
+        />
 
-            {/* Sidebar */}
-            <div
-              className={`fixed top-0 right-0 h-[300px] w-full bg-zinc-900 text-white z-50 p-6 transform  ease-in-out ${
-                menuOpen ? "translate-y-0" : "-translate-y-full duration-500"
-              }`}
+        <div
+          className={`absolute top-0 left-0 right-0 rounded-[20px] max-w-4xl w-full bg-zinc-900 text-white z-50 p-6 ${
+            menuOpen ? "fade-in" : "fade-out pointer-events-none"
+          }`}
+        >
+          <div className="flex justify-between items-center mb-8">
+            <div className="text-lg font-bold">imArslan.dev</div>
+            <button onClick={toggleMenu}>
+              <FiX size={24} />
+            </button>
+          </div>
+          <nav className="flex flex-col items-center justify-center gap-5">
+            {["home", "about", "projects", "experience"].map((item) => (
+              <a
+                key={item}
+                href={`#${item}`}
+                onClick={toggleMenu}
+                className="hover:text-gray-300 capitalize"
+              >
+                {item}
+              </a>
+            ))}
+            <a
+              href="https://github.com/imArslanJavaScriptor"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-gray-300"
             >
-              <div className="flex justify-between items-center mb-8">
-                <div className="text-lg font-bold">imArslan.dev</div>
-                <button onClick={toggleMenu}>
-                  <FiX size={24} />
-                </button>
-              </div>
-              <nav className="flex flex-col gap-5">
-                <a
-                  href="#home"
-                  onClick={toggleMenu}
-                  className="hover:text-gray-300"
-                >
-                  Home
-                </a>
-                <a
-                  href="#about"
-                  onClick={toggleMenu}
-                  className="hover:text-gray-300"
-                >
-                  About
-                </a>
-                <a
-                  href="#projects"
-                  onClick={toggleMenu}
-                  className="hover:text-gray-300"
-                >
-                  Projects
-                </a>
-                <a
-                  href="#experience"
-                  onClick={toggleMenu}
-                  className="hover:text-gray-300"
-                >
-                  Experience
-                </a>
-                <a
-                  href="https://github.com/imArslanJavaScriptor"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-gray-300"
-                >
-                  GitHub
-                </a>
-                <a
-                  href="/resume.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-gray-300"
-                >
-                  Resume
-                </a>
-                <a
-                  href="#contact"
-                  onClick={toggleMenu}
-                  className="bg-white text-black px-4 py-1.5 rounded-full text-sm font-medium shadow-sm hover:bg-gray-200 transition w-fit"
-                >
-                  Contact
-                </a>
-              </nav>
-            </div>
-          </>
-        )}
+              GitHub
+            </a>
+            <a
+              href="/resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-gray-300"
+            >
+              Resume
+            </a>
+            <a
+              href="#contact"
+              onClick={toggleMenu}
+              className="bg-white text-black px-4 py-1.5 rounded-full text-sm font-medium shadow-sm hover:bg-gray-200 transition w-fit"
+            >
+              Contact
+            </a>
+          </nav>
+        </div>
       </nav>
     </header>
   );

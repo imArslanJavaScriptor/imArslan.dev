@@ -10,14 +10,14 @@ import {
 } from "./components";
 import useDarkMode from "./hooks/useDarkMode";
 import { ArrowUp } from "lucide-react";
-import CustomCursor from "./components/CustomCursor";
+import ScrollProgressBar from "./components/ScrollProgressBar";
 
 function App() {
   const { isDark, toggle } = useDarkMode();
 
   return (
     <div className="min-h-screen bg-white dark:bg-[#121212] text-black dark:text-white transition-colors duration-300">
-      {/* <CustomCursor/> */}
+      <ScrollProgressBar/>
       <Header isDark={isDark} />
       <Hero />
       <About />

@@ -1,44 +1,72 @@
+import CalrityBusinessCover from "../assets/Calrity-Business-Analysis-SAAS.png"
+import ContrastCover from "../assets/Contrast-Webinars-SAAS.png"
+import Flow from "../assets/FlowCoverPic.png"
+import NewsifySAAS from "../assets/Newsify-Email-SAAS.png"
+import ORUMWebApp from "../assets/ORUM-E-Commerce-Web-App.png"
+import VestoSAAS from "../assets/Vesto-Accounts-SAAS.png"
+
+
 export const allProjects = [
   {
-    title: "GitHub Users Search App",
-    category: "Web development",
-    image: "https://images.unsplash.com/photo-1749303025584-0b4e15e4146b?q=80&w=1444&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    link: "https://github-users-app-demo.com",
-    description: "A React app to search and view GitHub user profiles with real-time API integration.",
+    id: 1,
+    title: "Flow - Clean Energy Landing Page",
+    description:
+      "A modern and responsive landing page for an energy-saving startup promoting a sustainable lifestyle. Designed for performance and aesthetic impact.",
+    skills: ["React", "Tailwind CSS", "Responsive"],
+    image: Flow,
+    link: "https://flow-landing-page-eta.vercel.app/",
+    gradient: "from-green-200 to-green-600"
   },
   {
-    title: "Car Zone",
-    category: "Web development",
-    image: "https://images.unsplash.com/photo-1749303025584-0b4e15e4146b?q=80&w=1444&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    link: "https://car-zone-project.com",
-    description: "A car rental and listing website built with React, featuring filters and booking flow.",
+    id: 2,
+    title: "Clarity – Business Analysis SAAS",
+    description:
+      "Clarity is a powerful business analysis platform focused on delivering growth-oriented insights and enterprise-grade solutions for modern organizations.",
+    skills: ["Next.js", "Stripe", "MongoDB"],
+    image: CalrityBusinessCover,
+    link: "https://ecommerce-app.com",
+    gradient: "from-blue-200 to-blue-600"
   },
   {
-    title: "Movflix",
-    category: "Web development",
-    image: "https://images.unsplash.com/photo-1749303025584-0b4e15e4146b?q=80&w=1444&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    link: "https://movflix-demo.com",
-    description: "A movie search and streaming interface using TMDB API with sleek UI and dark mode.",
+    id: 3,
+    title: "Contrast – Free Webinar Hosting SAAS",
+    description:
+      "Contrast provides a seamless way to host, schedule, and share impactful webinars globally. Ideal for educators, marketers, and entrepreneurs.",
+    skills: ["React DnD", "Firebase", "Material UI"],
+    image: ContrastCover,
+    link: "https://taskmanager.com",
+    gradient: "from-pink-200 to-pink-600"
   },
   {
-    title: "Fitness Zone",
-    category: "Web development",
-    image: "https://images.unsplash.com/photo-1749303025584-0b4e15e4146b?q=80&w=1444&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    link: "https://fitness-zone-app.com",
-    description: "A fitness app with workouts, nutrition plans, and progress tracking built in React.",
+    id: 4,
+    title: "Newsify – Email Newsletter SAAS",
+    description:
+      "Newsify is a clean, effective, and user-friendly platform for sending beautiful newsletters with advanced analytics and user segmentation.",
+    skills: ["React", "Framer Motion", "Tailwind"],
+    image: NewsifySAAS,
+    link: "https://arslan.dev",
+    gradient: "from-yellow-200 to-yellow-600"
   },
   {
-    title: "E-Commerce",
-    category: "Web development",
-    image: "https://images.unsplash.com/photo-1749303025584-0b4e15e4146b?q=80&w=1444&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    link: "https://ecommerce-clone-demo.com",
-    description: "A fully functional e-commerce store with product search, cart, and checkout flow.",
+    id: 5,
+    title: "ORUM – E-Commerce Web App",
+    description:
+      "ORUM delivers a fast, elegant, and scalable e-commerce experience. Built for performance, tailored for conversion, and optimized for mobile users.",
+    skills: ["Next.js", "MDX", "Tailwind"],
+    image: ORUMWebApp,
+    link: "https://myblog.com",
+    gradient: "from-purple-200 to-purple-600"
   },
   {
-    title: "Netflix Clone",
-    category: "Web development",
-    image: "https://images.unsplash.com/photo-1749303025584-0b4e15e4146b?q=80&w=1444&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    link: "https://netflix-clone-demo.com",
-    description: "A Netflix-style clone with movie trailers, categories, and Firebase auth.",
-  },
+    id: 6,
+    title: "Vesto – Accounting Solution SAAS",
+    description:
+      "Vesto is a cloud-based accounting solution designed for SMEs, offering streamlined invoicing, expense tracking, and financial insights.",
+    skills: ["React", "OpenWeather API"],
+    image: VestoSAAS,
+    link: "https://weatherly.com",
+    gradient: "from-cyan-200 to-cyan-600"
+  }
 ];
+
+
