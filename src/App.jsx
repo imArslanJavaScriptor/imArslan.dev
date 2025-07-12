@@ -27,7 +27,7 @@ function App() {
       <Footer />
       <button
         onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-        className="h-10 w-10 darkModeBTN flex items-center justify-center fixed bottom-4 right-4 cursor-pointer rounded-[10px]"
+        className="h-10 w-10 darkModeBTN flex items-center justify-center fixed bottom-4 right-4 cursor-pointer rounded-[10px] z-[10000]"
       >
         <ArrowUp />
       </button>

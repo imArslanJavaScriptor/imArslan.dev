@@ -80,7 +80,7 @@ function Header() {
               <FaGithub className="w-5 h-5" />
             </a>
             <a
-              href="/resume.pdf"
+              href="/MyResume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-gray-300"
@@ -145,7 +145,7 @@ function Header() {
               GitHub
             </a>
             <a
-              href="/resume.pdf"
+              href="/MyResume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-gray-300"
