@@ -23,8 +23,15 @@ function Projects() {
             key={project.id}
             className={`bg-gray-200 dark:bg-[#222]/50 text-black dark:text-[#efefef] 
             backdrop-blur-2xl rounded-[20px] shadow-lg border-t-[5px]  border-transparent transition-colors duration-300 dark:hover:border-gray-200 hover:border-gray-800
-              overflow-hidden grid grid-cols-1 md:grid-cols-2 border-t-transparent`}
+              overflow-hidden flex flex-col border-t-transparent`}
           >
+            <div className="h-[250px] md:h-[400px] w-full bg-white dark:bg-black/20 flex items-center justify-center p-2">
+              <img
+                src={project.image}
+                alt={project.title}
+                className="h-full w-full object-contain object-top"
+              />
+            </div>
             <div className="p-5 order-10 ">
               <h1
                 className={`text-xl font-bold mb-2 text-transparent bg-clip-text bg-gradient-to-r ${project.gradient}`}
@@ -53,13 +60,6 @@ function Projects() {
                 Visit Website
               </a>
             </div>
-            <div className="h-[300px] w-full md:order-10">
-              <img
-                src={project.image}
-                alt={project.title}
-                className="h-full w-full object-cover object-top"
-              />
-            </div>
           </div>
         ))}
       </div>
@@ -75,6 +75,7 @@ function Projects() {
         </div>
       )}
     </section>
+
   );
 }
 

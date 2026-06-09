@@ -1,15 +1,15 @@
 import React from "react";
-import ShrinkedProfileIMG from "../assets/ShrinkedProfileIMG.png";
+import ShrinkedProfileIMG from "../assets/ShrinkedProfileIMG.jpeg";
 
 function Hero() {
   return (
     <section
       id="home"
-      className="px-6 py-20 text-center flex flex-col items-center justify-center"
+      className="px-6 py-10 text-center flex flex-col items-center justify-center"
     >
       {/* Avatar */}
-      <div className="w-[175px] h-[175px] rounded-full bg-black dark:bg-white flex items-center justify-center mb-6">
-        <div className="w-[160px] h-[160px]">
+      <div className="w-[185px] h-[185px] rounded-full bg-black dark:bg-white flex items-center justify-center mb-6">
+        <div className="w-[180px] h-[180px]">
           <img
             src={ShrinkedProfileIMG}
             alt="Profile"
@@ -19,18 +19,21 @@ function Hero() {
       </div>
 
       {/* Heading */}
-      <h1 className="text-4xl md:text-5xl font-bold mb-2 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
+      <h1 className="text-4xl md:text-5xl font-bold mb-2 text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-purple-500">
         Hi, I'm <span>Arslan</span>.
       </h1>
-      <h2 className="text-4xl md:text-5xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-600">
-        Frontend Developer
+      <h2 className="text-3xl md:text-4xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500 mb-6 tracking-wide uppercase">
+        Software Engineer
       </h2>
 
       {/* Description */}
       <p className="paraText max-w-xl mx-auto mb-6">
-        Self-taught developer passionate about crafting user interfaces and
-        interactive web applications that make a positive impact — always eager
-        to learn and grow in the tech world.
+        Versatile Software Engineer with a passion for building scalable,
+        high-performance web applications across the full stack. Experienced in
+        architecting robust database schemas, developing secure RESTful APIs,
+        and managing cloud-based server infrastructure. Committed to bridging
+        the gap between elegant user interfaces and efficient backend logic to
+        deliver high-impact digital solutions.
       </p>
 
       {/* CTA Buttons */}
@@ -57,20 +60,16 @@ function Hero() {
       {/* Tech Skills Animation */}
       <div className="icon-scroll-wrapper my-8 max-w-[800px] mx-auto">
         <div className="icon-scroll-track items-center">
+          {/* Core Languages & Frameworks */}
           <img
             src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
             alt="JavaScript"
             className="h-10 w-auto"
           />
           <img
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg"
-            alt="Firebase"
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
+            alt="TypeScript"
             className="h-10 w-auto"
-          />
-          <img
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
-            alt="MongoDB"
-            className="h-8 w-auto"
           />
           <img
             src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
@@ -82,32 +81,51 @@ function Hero() {
             alt="Next.js"
             className="h-10 w-auto bg-white rounded"
           />
-          <img
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
-            alt="TypeScript"
-            className="h-10 w-auto"
-          />
+
+          {/* Backend & Databases */}
           <img
             src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
             alt="Node.js"
+            className="h-10 w-auto"
+          />
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg"
+            alt="Express.js"
+            className="h-10 w-auto bg-white rounded"
+          />
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
+            alt="MongoDB"
+            className="h-8 w-auto"
+          />
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
+            alt="PostgreSQL"
             className="h-10 w-auto"
           />
 
-          {/* Repeat once more to create seamless infinite loop */}
+          {/* DevOps & Infrastructure */}
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
+            alt="Docker"
+            className="h-10 w-auto"
+          />
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg"
+            alt="Linux"
+            className="h-10 w-auto"
+          />
+
+          {/* Repeat for seamless loop */}
           <img
             src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
             alt="JavaScript"
             className="h-10 w-auto"
           />
           <img
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg"
-            alt="Firebase"
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
+            alt="TypeScript"
             className="h-10 w-auto"
-          />
-          <img
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
-            alt="MongoDB"
-            className="h-8 w-auto"
           />
           <img
             src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
@@ -120,13 +138,33 @@ function Hero() {
             className="h-10 w-auto bg-white rounded"
           />
           <img
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
-            alt="TypeScript"
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+            alt="Node.js"
             className="h-10 w-auto"
           />
           <img
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
-            alt="Node.js"
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg"
+            alt="Express.js"
+            className="h-10 w-auto bg-white rounded"
+          />
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
+            alt="MongoDB"
+            className="h-8 w-auto"
+          />
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
+            alt="PostgreSQL"
+            className="h-10 w-auto"
+          />
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
+            alt="Docker"
+            className="h-10 w-auto"
+          />
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg"
+            alt="Linux"
             className="h-10 w-auto"
           />
         </div>
